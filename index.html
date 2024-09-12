@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Sign Up Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <img src="./facebook.png" alt="Facebook" id="logo">
+        <div class="input">
+            <div class="header">
+                <h1>Create a new account</h1>
+                <p>It's quick and easy.</p>
+            </div>
+            <form id="signup-form">
+                <div class="name">
+                    <input type="text" name="FirstName" placeholder="First Name" id="fname" required>
+                    <input type="text" name="Surname" placeholder="Surname" id="sname" required>
+                </div>
+                <input type="email" name="email" placeholder="Mobile number or email address" required>
+                <input type="password" name="password" id="password" placeholder="New password" required>
+                
+                <p>Date of birth</p>
+                <div class="dob">
+                    <input type="number" name="date" min="1" max="31" placeholder="Day" required>
+                    <input type="text" name="month" list="monthname" placeholder="Month" required>
+                    <datalist id="monthname">
+                        <option value="January">
+                        <option value="February">
+                        <option value="March">
+                        <option value="April">
+                        <option value="May">
+                        <option value="June">
+                        <option value="July">
+                        <option value="August">
+                        <option value="September">
+                        <option value="October">
+                        <option value="November">
+                        <option value="December">
+                    </datalist>
+                    <input type="number" name="year" min="1900" max="2024" placeholder="Year" required>
+                </div>
+                
+                <p>Gender</p>
+                <div class="gender">
+                    <div class="option">
+                        <input type="radio" name="gender" value="Female" id="Female" required>
+                        <label for="Female">Female</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="gender" value="Male" id="Male">
+                        <label for="Male">Male</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="gender" value="Custom" id="Custom">
+                        <label for="Custom">Custom</label>
+                    </div>
+                </div>
+
+                <p id="footer">People who use our services may have uploaded your contact information to Facebook. <a href="#">Learn more.</a></p>
+                <p>By clicking Sign Up, you agree to our <a href="#">Terms, Privacy Policy and Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+                <input type="submit" id="submit-btn" value="Sign Up">
+            </form>
+            <p><a href="#">Already have an account?</a></p>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
